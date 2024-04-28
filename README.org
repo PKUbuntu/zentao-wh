@@ -1,0 +1,17 @@
+* Zentao webhook
+
+** JSON data
+-  sessionid -> get "sessionID"
+#+begin_src bash
+  curl https://zentaobiz.demo.qucheng.cc/api-getsessionid.json
+#+end_src
+
+- login
+#+begin_src bash
+  curl https://zentaobiz.demo.qucheng.cc/user-login.json?account=demo&password=quickon4You&zentaosid=5e44d43ad82af53f00d7ba9805a880a5
+#+end_src
+
+- 获取 json
+#+begin_src bash
+  curl https://zentaobiz.demo.qucheng.cc/story-view-8.json?zentaosid=5e44d43ad82af53f00d7ba9805a880a5
+#+end_src
