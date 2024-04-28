@@ -1,6 +1,31 @@
 * Zentao webhook
 
-** JSON data
+- 通过 webhook 更新推送，获取
+#+begin_src javascript
+{
+    "objectType": "",  //对象类型，可以为空
+    "objectID": "",    //对象ID，可以为空
+    "product": "",     //关联产品ID，可以为空
+    "project": "",     //关联执行ID，可以为空
+    "action": "",      //动作，可以为空
+    "actor": "",       //操作者，可以为空
+    "date": "",        //操作时间，可以为空
+    "comment": "",     //备注，可以为空
+    "text": ""         //操作内容，包含操作对象的url，必选。
+}
+#+end_src
+- 使用 cli 保持登录态，获取页面详细信息后：
+  - 抽取关系人
+  - 抽取优先级
+  - 抽取关键内容
+
+- 发送给相关的集成目标系统
+
+** Webhook
+
+https://www.zentao.net/book/zentaopms/996.html
+
+** Cli -> JSON data
 -  sessionid -> get "sessionID"
 #+begin_src bash
   curl https://zentaobiz.demo.qucheng.cc/api-getsessionid.json
